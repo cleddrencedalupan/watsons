@@ -9,15 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
                 const pageId = this.dataset.pageId;
-                const page = pageData.find(p => p.id == pageId);
+                const pageContent = document.getElementById('page-content-' + pageId);
 
-                if (page) {
-                    subView.innerHTML = page.content;
+                if (pageContent) {
+                    subView.innerHTML = pageContent.innerHTML;
                     mainView.style.display = 'none';
                     subView.style.display = 'block';
 
                     const backButton = document.createElement('button');
-                    backButton.textContent = 'Back';
+                    backButton.innerHTML = '&times;'; // Use the multiplication sign as a close icon
+                    backButton.classList.add('back-button', 'close-button');
                     backButton.addEventListener('click', function() {
                         mainView.style.display = 'block';
                         subView.style.display = 'none';

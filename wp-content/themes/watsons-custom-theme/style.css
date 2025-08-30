@@ -77,14 +77,51 @@ body {
 }
 
 #sub-view {
-    background: #fff;
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     margin-top: 2rem;
-    color: #333;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
 }
 
-#sub-view button {
+.back-button {
+    background-color: #4CAF50; /* Example color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
     margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
 }
 
 @media (max-width: 600px) {
