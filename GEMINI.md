@@ -2,8 +2,8 @@
 
 - **Website:** https://watsonsbrohub.com/
 - **PHP Version:** 8.3.6
-- **MySQL User:** root
-- **MySQL Password:** password
+- **MySQL User:** watsons_user
+- **MySQL Password:** WatsonsR0cks_2025!
 
 ## WordPress Admin
 

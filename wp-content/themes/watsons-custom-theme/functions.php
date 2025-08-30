@@ -2,6 +2,8 @@
 function watsons_theme_support() {
     // Add support for featured images
     add_theme_support( 'post-thumbnails' );
+    // Add support for custom headers
+    add_theme_support( 'custom-header' );
 }
 add_action( 'after_setup_theme', 'watsons_theme_support' );
 
@@ -24,4 +26,9 @@ function disable_block_editor_for_pages( $use_block_editor, $post_type ) {
     return $use_block_editor;
 }
 add_filter( 'use_block_editor_for_post_type', 'disable_block_editor_for_pages', 10, 2 );
+
+function watsons_theme_scripts() {
+    wp_enqueue_style( 'watsons-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'watsons_theme_scripts' );
 ?>

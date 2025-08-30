@@ -41,3 +41,19 @@ body {
         /* For example, a different background image or position */
     }
 }
+
+.site-header {
+    margin-bottom: 2rem;
+}
+
+.site-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-header-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}

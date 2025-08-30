@@ -1,7 +1,16 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <h1>Hello Watsons</h1>
+    <header id="masthead" class="site-header">
+        <div class="site-branding">
+            <?php
+            if ( has_custom_header() ) {
+                the_custom_header_markup();
+            }
+            ?>
+        </div>
+    </header>
+    
 </div>
 
 <?php get_footer(); ?>
