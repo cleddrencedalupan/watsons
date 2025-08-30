@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         subView.style.display = 'none';
                     });
                     subView.prepend(backButton);
+                    subView.prepend(document.createElement('br'));
                 }
             });
         });
