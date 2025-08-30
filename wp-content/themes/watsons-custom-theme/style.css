@@ -2,7 +2,7 @@
 Theme Name: Watsons Custom Theme
 Author: Gemini
 Description: A custom mobile-friendly theme for Watsons Brohub.
-Version: 1.2
+Version: 1.3
 */
 
 body {
@@ -38,7 +38,11 @@ body {
     align-items: center;
 }
 
-.custom-header-media img {
+.custom-header-media {
+    width: 100%;
+}
+
+.custom-header-media img, .header-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -85,8 +89,10 @@ body {
     }
 
     .page-grid a:last-child:nth-child(odd) {
-        grid-column: span 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
         justify-self: center;
+        width: 50%;
     }
 }
 
