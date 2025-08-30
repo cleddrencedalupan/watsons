@@ -1,0 +1,43 @@
+/*
+Theme Name: Watsons Custom Theme
+Author: Gemini
+Description: A custom mobile-friendly theme for Watsons Brohub.
+Version: 1.0
+*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('/wp-content/uploads/2025/08/watsons-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Creates a parallax-like effect */
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: transparent;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    body {
+        /* You could add specific styles for desktop here if needed */
+        /* For example, a different background image or position */
+    }
+}

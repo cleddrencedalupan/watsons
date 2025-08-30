@@ -1,0 +1,2 @@
+[30-Aug-2025 04:22:40 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'ztbsytte_cyd'@'localhost' (using password: YES) in /var/www/watsons/wp-includes/class-wpdb.php on line 1988
+[30-Aug-2025 04:35:16 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /var/www/watsons/wp-includes/class-wpdb.php on line 1988
