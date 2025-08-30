@@ -5,7 +5,9 @@
         <div class="site-branding">
             <?php
             if ( has_custom_header() ) {
-                the_custom_header_markup();
+                $header_markup = get_custom_header_markup();
+                $header_markup = str_replace('<img', '<img class="custom-header-image"', $header_markup);
+                echo $header_markup;
             }
             ?>
         </div>
