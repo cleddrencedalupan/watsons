@@ -1,0 +1,11 @@
+# Ignore Gemini's internal memory file
+GEMINI.md
+
+# Ignore sensitive files and directories
+# Add patterns for files containing keys, credentials, or other sensitive information here.
+# Examples:
+# *.key
+# *.pem
+# config.ini
+# .env
+# credentials.json
