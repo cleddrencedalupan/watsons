@@ -29,6 +29,24 @@ add_filter( 'use_block_editor_for_post_type', 'disable_block_editor_for_pages', 
 
 function watsons_theme_scripts() {
     wp_enqueue_style( 'watsons-style', get_stylesheet_uri() );
+    wp_enqueue_script( 'custom-home', get_template_directory_uri() . '/custom-home.js', array(), '1.0', true );
+
+    $pages_data = array();
+    $pages = get_pages(array(
+        'sort_column' => 'menu_order',
+        'sort_order' => 'ASC'
+    ));
+
+    foreach ($pages as $page) {
+        $pages_data[] = array(
+            'id' => $page->ID,
+            'title' => $page->post_title,
+            'content' => apply_filters('the_content', $page->post_content),
+            'featured_image_url' => get_the_post_thumbnail_url($page->ID, 'full')
+        );
+    }
+
+    wp_localize_script('custom-home', 'pageData', $pages_data);
 }
 add_action( 'wp_enqueue_scripts', 'watsons_theme_scripts' );
 ?>
