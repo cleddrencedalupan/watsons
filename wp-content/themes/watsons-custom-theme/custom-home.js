@@ -17,13 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     subView.style.display = 'block';
 
                     const backButton = document.createElement('button');
-                    backButton.innerHTML = '&times;'; // Use the multiplication sign as a close icon
+                    backButton.innerHTML = '&#8592;'; // Use the left arrow as a back icon
                     backButton.classList.add('back-button', 'close-button');
                     backButton.addEventListener('click', function() {
                         mainView.style.display = 'block';
                         subView.style.display = 'none';
                     });
                     subView.prepend(backButton);
+                    subView.prepend(document.createElement('br'));
                     subView.prepend(document.createElement('br'));
                 }
             });
