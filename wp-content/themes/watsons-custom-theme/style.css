@@ -4,9 +4,9 @@ Author: Gemini
 Description: A custom mobile-friendly theme for Watsons Brohub.
 Version: 1.9
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate&display=swap');
 body {
-    font-family: sans-serif;
+    font-family: 'Syncopate', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -146,4 +146,7 @@ body {
     .page-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+p {
+    font-family: 'Poppins', sans-serif;
 }
