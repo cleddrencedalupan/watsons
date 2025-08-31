@@ -4,7 +4,7 @@ Author: Gemini
 Description: A custom mobile-friendly theme for Watsons Brohub.
 Version: 1.9
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
 body {
     font-family: 'Syncopate', sans-serif;
     line-height: 1.6;
@@ -112,7 +112,6 @@ body {
     }
 }
 p {
-    font-family: 'Poppins', sans-serif;
 }
 
 /* General Button Styles */
@@ -127,10 +126,10 @@ input[type="submit"] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 0;
+    font-size: 18px;
 }
 
 /* Specific Button Overrides */
@@ -170,4 +169,70 @@ input[type="submit"] {
 
 .close-button:hover {
     background-color: #333333;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table img {
+  width: 100%;
+  max-width: 200px;
+  min-width: 100px;
+  height: auto;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: "";
+  }
+
+  table img {
+    width: 100%;
+    max-width: 150px; /* Smaller max-width for mobile */
+    min-width: 0; /* remove min-width for mobile */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+  }
 }
